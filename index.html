@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة أحمد فتحي جبل التعليمية</title>
+    <style>
+        body { margin: 0; padding: 0; font-family: sans-serif; background: #667eea; }
+        #selection-screen { text-align: center; padding-top: 25vh; height: 100vh; color: white; }
+        .main-btn { padding: 25px 50px; margin: 15px; font-size: 22px; cursor: pointer; border: none; border-radius: 20px; background: #d4af37; color: white; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        .app-container { display: none; width: 100%; height: 100vh; overflow: hidden; }
+        iframe { width: 100%; height: 100vh; border: none; }
+    </style>
+</head>
+<body>
+
+<div id="selection-screen">
+    <h1>أهلاً بك في منصة أحمد فتحي جبل</h1>
+    <p>اختر نوع الأرقام للبدء:</p>
+    <button class="main-btn" onclick="showApp('arabic')">الأرقام العربية (١، ٢، ٣)</button>
+    <br>
+    <button class="main-btn" onclick="showApp('english')">الأرقام الإنجليزية (1, 2, 3)</button>
+</div>
+
+<div id="arabic-app" class="app-container"><iframe src="الضرب.html"></iframe></div>
+<div id="english-app" class="app-container"><iframe src="الضررب.html"></iframe></div>
+
+<script>
+    function showApp(type) {
+        document.getElementById('selection-screen').style.display = 'none';
+        if(type === 'arabic') {
+            document.getElementById('arabic-app').style.display = 'block';
+        } else {
+            document.getElementById('english-app').style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html>
